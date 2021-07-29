@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>ASSIMILATION TEST</title>
+    <script>
+       function checkmarks(){
+           var firstques=document.querySelector('input[name="i"]:checked');
+          
+          
+           if(firstques.value=="Object-Based")
+           t=1;
+           
+           /*var firstques=document.getElementByName("i");*/
+           var secondques=document.querySelector('input[name="ii"]:checked');
+           
+         
+           if(secondques.value=="HyperText Markup Language")
+           t+=1;
+          
+           var thirdques=document.querySelector('input[name="iii"]:checked');
+           
+           
+           if(thirdques.value=="HTML, Head, Title, Body" )
+           t+=1;
+           /*var fourthques=document.querySelector('input[name="iv"]:checked');
+           
+           
+           if(fourthques.value=="div tag cannot be inside the p tag" && fourthques.value=="p tag states paragraph" )*/
+           if((document.getElementById("n").checked) && (document.getElementById("o").checked))
+           t+=2;
+          /* if(document.getElementById("o").checked)
+           t+=1;*/
+          
+           /*var fifthques=document.querySelector('input[name="v"]:checked');
+           
+           if( fifthques.value=="Client script language" && fifthques.value=="Case sensitive")*/
+           if((document.getElementById("q").checked)&&(document.getElementById("s").checked))
+           t+=2;
+           /*if(document.getElementById("s").checked)
+           t+=1;*/
+          
+          
+
+           document.getElementById("result").innerHTML="* Your Marks : "+ t+" out of 7" + " *"+ "<br><br>"+"Thanks for giving the test";
+           return false;
+
+       }
+
+    </script>
+  <style>
+      h1{
+          background-color: chartreuse;
+          text-align: center;
+          font-family: Arial;
+
+      }
+      body{
+          background-color: cornflowerblue;
+
+      }
+      .para{
+          background-color: cyan;
+          
+      }
+      #result{
+          text-align:center;
+          color: darkgreen;
+          background-color:chartreuse ;
+      }
+      #count{
+        padding: 15px;
+      }
+
+
+  </style>
+</head>
+<body>
+    <h1>HTML CSS JS TEST</h1>
+    
+    <p class="para"> * Take the test and know your knowledge *</p>
+    <p class="para">1. Which type of JavaScript language is ___<text id=count>MARKS 1</text></p><br>
+    <input type=radio class="1" value=Object-Oriented name="i" id=a> Object-Oriented<br>
+    <input type=radio class="1" value=Object-Based name="i" id=b> Object-Based<br>
+    <input type=radio class="1" value=Assembly-language name="i" id=c> Assembly-language<br>
+    <input type=radio class="1" value=High-level name="i" id=d> High-level<br><br>
+   <p class="para">2. HTML stands for -<text id=count>MARKS 1</text></p><br>                
+    <input type=radio class="2" name="ii"  value="HighText Machine Language" id=e> HighText Machine Language<br>
+    <input type=radio class="2" name="ii" value="HyperText and links Markup Language" id=f> HyperText and links Markup Language<br>
+    <input type=radio class="2" name="ii" id=g value="HyperText Markup Language"> HyperText Markup Language<br>
+    <input type=radio class="2" name="ii" id=h value="None of these"> None of these<br><br>
+   <p class="para">3. The correct sequence of HTML tags for starting a webpage is -<text id=count>MARKS 1</text></p><br>
+    <input type=radio class="3" name="iii" value="Head, Title, HTML, Body" id=i> Head, Title, HTML, Body<br>
+    <input type=radio class="3" name="iii" id=j value="HTML, Body, Title, Head"> HTML, Body, Title, Head<br>
+    <input type=radio class="3" name="iii" id=k value="Body, HTML, Title, Head"> Body, HTML, Title, Head<br>
+    <input type=radio class="3" name="iii" id=l value="HTML, Head, Title, Body"> HTML, Head, Title, Body<br><br>
+   <p class="para">4. Select the correct statement -<text id=count>MARKS 2</text></p><br>
+    <input type=checkbox class="4" name="iv" value= "div tag can be inside the p tag" id=m> div tag can be inside the p tag<br>
+    <input type=checkbox class="4" name="iv" value= "div tag cannot be inside the p tag" id=n> div tag cannot be inside the p tag<br>
+    <input type=checkbox class="4" name="iv" value= "p tag states paragraph" id=o> p tag states paragraph<br>
+    <input type=checkbox class="4" name="iv" value= "All of the above" id=p> All of the above <br><br>
+   <p class="para">5. Java script language is -<text id=count>MARKS 2</text></p><br>
+    <input type=checkbox class="5" name="v" value= "Client script language" id=q> Client script language<br>
+    <input type=checkbox class="5" name="v" value= "Can run anywhere including browser" id=r> Can run anywhere including browser<br>
+    <input type=checkbox class="5" name="v" value= "Case sensitive" id=s> Case sensitive<br>
+    <input type=checkbox class="5" name="v" value= "All of the above" id=t> All of the above <br><br>
+    
+    <input type=submit id=marks onclick="checkmarks()"><br>
+    <div id="result"></div>
+
+
+   
+    
+</body>
+</html>
